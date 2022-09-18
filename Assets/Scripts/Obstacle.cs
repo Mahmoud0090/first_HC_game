@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class Obstacle : MonoBehaviour
         if(collision.gameObject.name == "Player")
         {
             Destroy(collision.gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         if(collision.gameObject.name == "Out")
         {
